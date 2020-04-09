@@ -6,10 +6,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 const store = configureStore();
 
-store.subscribe(() => {
-  console.log(store.getState().todos);
-});
-
 ReactDOM.render(
   <Provider store={store}>
     <Suspense fallback={<h1>Loading</h1>}>
