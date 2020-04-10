@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { removeTodo, changeStatus } from '../../actions/todos';
 import { Card } from './TodoItemStyle';
-import { Button } from 'antd';
+import { Button, message } from 'antd';
 import { DeleteFilled, CheckSquareFilled, MinusSquareFilled } from "@ant-design/icons";
 
 const TodoItem = ({
@@ -13,14 +13,27 @@ const TodoItem = ({
     isCompleted,
     changeStatus, 
     removeTodo}) => {
+    
+    const removeTodoItem = (id) => {
+      message.error('Todo has removed');
+      removeTodo({ id })
+    }
+
+    const markAsCompleted = (id) => {
+      changeStatus({ id });
+
+      !isCompleted
+        ? message.success("Marked as completed")
+        : message.warning("Marked as not completed");
+    }
     return (
       <Card isCompleted={isCompleted} title={title}>
         <p>{description}</p>
         <p>{createdAt}</p>
         <Button 
             icon={isCompleted ? <MinusSquareFilled /> : <CheckSquareFilled />} 
-            onClick={() => changeStatus({ id })} />
-        <Button icon={<DeleteFilled />} onClick={() => removeTodo({ id })} />
+            onClick={() => markAsCompleted(id)} />
+        <Button icon={<DeleteFilled />} onClick={() => removeTodoItem(id)} />
       </Card>
     );
 }
