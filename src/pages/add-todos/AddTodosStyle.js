@@ -15,12 +15,13 @@ export const Form = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 30rem;
-    height: 17rem;
+    width: 40rem;
+    height: 22rem;
     padding: 1rem;
 `;
 
 export const Input = styled(antdInput)`
     margin-bottom: 1rem;
-    height: 4rem;
+    height: 5rem;
+    width: 100%;
 `;
