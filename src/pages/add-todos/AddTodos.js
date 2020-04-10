@@ -37,10 +37,10 @@ const AddTodos = ({ addTodo }) => {
 
 
     return (
-      <AddTodosPageWrapper onSubmit={addNewTodo}>
+      <AddTodosPageWrapper>
         <Title>Add todos</Title>
 
-        <Form autoComplete="off">
+        <Form onSubmit={addNewTodo} autoComplete="off">
           <Input
             name="title"
             placeholder="Title"
@@ -55,8 +55,8 @@ const AddTodos = ({ addTodo }) => {
             placeholder="Description (Optional)"
             allowClear
             value={todoValues.description}
-            autoSize={{minRows: 4, maxRows: 4}}
-            style={{ marginBottom: '1rem' }}
+            autoSize={{ minRows: 4, maxRows: 4 }}
+            style={{ marginBottom: "1rem" }}
             onChange={(e) =>
               setTodoValues({ ...todoValues, description: e.target.value })
             }
