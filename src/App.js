@@ -17,8 +17,9 @@ const todosRoutes = [
 
 const App = () => {
   return (
-    <div className="App">
+    <>
       <Navbar />
+
       <Switch>
         {
           todosRoutes.map(route => (
@@ -31,7 +32,7 @@ const App = () => {
           ))
         }
       </Switch>
-    </div>
+    </>
   );
 }
 

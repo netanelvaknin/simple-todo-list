@@ -2,8 +2,9 @@ import styled from 'styled-components/macro';
 
 export const TodosPageWrapper = styled.div`
     padding: 2rem;
+    
     @media (max-width: 991px) {
-    text-align: center;
+        text-align: center;
     }
 `;
 

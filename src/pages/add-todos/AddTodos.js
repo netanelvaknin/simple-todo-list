@@ -50,6 +50,7 @@ const AddTodos = ({ addTodo }) => {
               setTodoValues({ ...todoValues, title: e.target.value })
             }
           />
+
           <TextArea
             name="description"
             placeholder="Description (Optional)"
@@ -61,6 +62,7 @@ const AddTodos = ({ addTodo }) => {
               setTodoValues({ ...todoValues, description: e.target.value })
             }
           />
+          
           <Button htmlType="submit" type="primary" size="large">
             Add todo
           </Button>
