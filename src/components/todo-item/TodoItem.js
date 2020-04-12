@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { removeTodo, changeStatus } from '../../actions/todos';
+import { removeTodo, changeStatus } from '../../store/actions/todos';
 import { Card } from './TodoItemStyle';
 import { Button, message } from 'antd';
 import { DeleteFilled, CheckSquareFilled, MinusSquareFilled } from "@ant-design/icons";

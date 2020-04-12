@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../../actions/todos';
+import { addTodo } from '../../store/actions/todos';
 import { AddTodosPageWrapper, Form, Input } from "./AddTodosStyle";
 import { Typography, Button, message } from "antd";
   

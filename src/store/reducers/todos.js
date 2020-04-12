@@ -7,7 +7,7 @@ const todosReducer = (state = defaultTodosState, action) => {
         case 'CHANGE_STATUS':
             const index = state.findIndex(todo => todo.id === action.id);
             state[index].isCompleted = !state[index].isCompleted;
-            return [...state]
+            return [...state];
         case 'REMOVE_TODO': 
             return state.filter(todo => todo.id !== action.id);
         default: 
